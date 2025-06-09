@@ -1,2 +1,35 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
-*
+# Virtual environment folder
+venv/
+
+# Python cache and bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask environment variables and instance folder
+.env
+instance/
+
+# TensorFlow / Keras model files (if not using Git LFS)
+*.h5
+*.hdf5
+
+# Pickle files
+*.pkl
+
+# Distribution / packaging files
+build/
+dist/
+*.egg-info/
+
+# IDE / editor folders
+.vscode/
+.idea/
+
+# Testing and coverage
+.coverage
+*.cover
+.pytest_cache/
+
+# macOS system files
+.DS_Store
