@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next Word Prediction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@400..900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background: #5d8aa8;
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            border-radius: 20px;
+            padding: 40px 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.0);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            width: 90%;
+            max-width: 700px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            text-shadow: none;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            transition: all 0.5s ease-in-out;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #input-text {
+            font-family: 'Inter', sans-serif;
+            width: calc(100% - 60px);
+            padding: 20px 30px;
+            margin: 0 0 30px 0;
+            font-size: 1.4rem;
+            background: rgba(255, 255, 255, 0.0);
+            border: 1px solid rgba(0, 213, 255, 0.64);
+            border-radius: 12px;
+            color: #ffffff;
+            transition: all 0.3s ease;
+            outline: none;
+            box-sizing: border-box;
+            resize: vertical;
+            min-height: 180px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(0, 234, 255, 0.66);
+        }
+
+        #input-text::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        #input-text:focus {
+            border-color:rgb(0, 174, 255);
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.9);
+            transform: scale(1.01);
+        }
+
+        #prediction {
+            font-family: 'Inter', sans-serif;
+            margin-top: 30px;
+            font-size: 1.6rem;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(130, 185, 220, 0.7), 0 0 25px rgba(94, 149, 185, 0.5);
+            transition: all 0.5s ease;
+            min-height: 1.6em;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg,rgb(34, 153, 153),rgb(11, 117, 199),rgb(15, 59, 80));
+            border-radius: 25px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.8;
+            transition: opacity 0.4s ease-in-out, filter 0.4s ease-in-out;
+            background-size: 200% 200%;
+            animation: glowing-border-anim 4s infinite alternate;
+        }
+
+        .container:hover::before {
+            opacity: 1;
+            filter: blur(15px);
+        }
+
+        @keyframes glowing-border-anim {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 40px;
+                max-width: 95%;
+            }
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+            #input-text {
+                font-size: 1.1rem;
+                padding: 15px 20px;
+                min-height: 120px;
+            }
+            #prediction {
+                font-size: 1.3rem;
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 25px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            #input-text {
+                font-size: 1rem;
+                padding: 12px 15px;
+                min-height: 100px;
+            }
+            #prediction {
+                font-size: 1.1rem;
+                margin-top: 15px;
+            }
+        }
+
+        #input-text::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #input-text::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        #input-text::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #82b9dc, #5e95b9);
+            border-radius: 10px;
+        }
+
+        #input-text::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #9ac1e0, #73a7cc);
+        }
+
+        ::selection {
+            background-color:rgb(0, 187, 255);
+            color: #1a1a1a;
+        }
+
+        ::-moz-selection {
+            background-color:rgb(0, 183, 255);
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Next Word Predictor</h1>
+    <div class="container">
+        <textarea id="input-text" placeholder="Type your text here..." rows="4"></textarea>
+        <div id="prediction"></div>
+    </div>
+
+    <script>
+        const inputText = document.getElementById('input-text');
+        const predictionDiv = document.getElementById('prediction');
+        
+        async function getPrediction() {
+            const text = inputText.value.trim();
+            if (text) {
+                try {
+                    const response = await fetch('/predict', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ input_text: text })
+                    });
+                    const data = await response.json();
+                    predictionDiv.textContent = `Next Word Predictor: ${data.next_word}`;
+                    predictionDiv.classList.remove('prediction-animate');
+                    void predictionDiv.offsetWidth;
+                    predictionDiv.classList.add('prediction-animate');
+                } catch (error) {
+                    console.error('Error:', error);
+                    predictionDiv.textContent = 'Error getting prediction';
+                }
+            } else {
+                predictionDiv.textContent = '';
+            }
+        }
+
+        inputText.addEventListener('input', getPrediction);
+
+        inputText.addEventListener('keydown', function(event) {
+            if (event.key === 'Tab' && predictionDiv.textContent) {
+                event.preventDefault();
+                const nextWord = predictionDiv.textContent.replace('Next Word Predictor: ', '');
+                if (inputText.value.endsWith(' ')) {
+                    inputText.value += nextWord + ' ';
+                } else {
+                    inputText.value += ' ' + nextWord + ' ';
+                }
+                predictionDiv.textContent = '';
+                inputText.dispatchEvent(new Event('input'));
+            }
+        });
+    </script>
+</body>
+</html>
