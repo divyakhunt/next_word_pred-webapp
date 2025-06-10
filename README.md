@@ -8,7 +8,7 @@ This is a deep learning-powered web app that predicts the **next word** as you t
 ⚠️ _Note: The live demo may not always work properly because the model requires high CPU and RAM for each prediction, which can exceed the free-tier hosting limits._
 
 ### 🎬 Demo Video  
-📽️ [Click to watch the demo video](demo-video.mp4)
+📽️ [Click to watch the demo video](https://drive.google.com/file/d/1j1ZtJrDuYYBlP4ZQk0hcP5GYsvk-dVmA/view?usp=sharing)
 
 ---
 
