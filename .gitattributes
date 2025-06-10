@@ -1,2 +1,9 @@
 *.h5 filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+to filter=lfs diff=lfs merge=lfs -text
+repeat filter=lfs diff=lfs merge=lfs -text
+\# filter=lfs diff=lfs merge=lfs -text
+Already filter=lfs diff=lfs merge=lfs -text
+done, filter=lfs diff=lfs merge=lfs -text
+but filter=lfs diff=lfs merge=lfs -text
+safe filter=lfs diff=lfs merge=lfs -text
