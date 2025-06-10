@@ -39,7 +39,6 @@ This is a deep learning-powered web app that predicts the **next word** as you t
 ├── requirements.txt       # Required Python packages
 ├── Procfile               # Deployment config
 ├── .gitattributes         # Git LFS tracking
-└── demo-video.mp4         # App demo video
 ```
 
 ---
