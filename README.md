@@ -8,7 +8,8 @@ This is a deep learning-powered web app that predicts the **next word** as you t
 ⚠️ _Note: The live demo may not always work properly because the model requires high CPU and RAM for each prediction, which can exceed the free-tier hosting limits._
 
 ### 🎬 Demo Video  
-[![Watch the demo](https://img.youtube.com/vi/abc123xyz/0.jpg)](https://www.youtube.com/watch?v=abc123xyz)
+📽️ [Click to watch the demo video](Next Word Prediction - video.mp4)
+
 ---
 
 ## 📚 Dataset
