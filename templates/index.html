@@ -240,7 +240,7 @@
         inputText.addEventListener('keydown', function(event) {
             if (event.key === 'Tab' && predictionDiv.textContent) {
                 event.preventDefault();
-                const nextWord = predictionDiv.textContent.replace('Next Word Predictor: ', '');
+                const nextWord = predictionDiv.textContent.replace('Next Predicted Word: ', '');
                 if (inputText.value.endsWith(' ')) {
                     inputText.value += nextWord + ' ';
                 } else {
