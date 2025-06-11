@@ -38,7 +38,7 @@ This is a deep learning-powered web app that predicts the **next word** as you t
 ├── tokenizer.pkl          # Tokenizer used for input processing
 ├── requirements.txt       # Required Python packages
 ├── Procfile               # Deployment config
-├── .gitattributes         # Git LFS tracking
+└── .gitattributes         # Git LFS tracking
 ```
 
 ---
