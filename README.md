@@ -35,7 +35,7 @@ Curious about how the model behind this app was built?
 The training process — including **data preprocessing**, **tokenization**, and the **Bidirectional LSTM architecture** — is documented in detail in the Jupyter Notebook below:
 
 📓 **Explore the Model Training Notebook:**  
-[🔗 Model Training Code on GitHub](https://github.com/your-divyakhunt/next-word-predictor/blob/main/next_word_predictor.ipynb)
+[🔗 Model Training Code on GitHub](https://github.com/divyakhunt/next-word-predictor/blob/main/next_word_predictor.ipynb)
 
 > 📁 *This is my GitHub repository link which shows how I trained the model used in this web app.*
 > This notebook walks you through each step of training the next word prediction model used in this web app.
