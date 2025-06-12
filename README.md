@@ -31,14 +31,17 @@ This is a deep learning-powered web app that predicts the **next word** as you t
 ## 📁 Project Structure
 
 ```
-├── static/                # CSS & JS files
-├── templates/             # HTML (e.g., index.html)
-├── app.py                 # Flask backend
-├── next_word_model.h5     # Trained Keras model
-├── tokenizer.pkl          # Tokenizer used for input processing
-├── requirements.txt       # Required Python packages
-├── Procfile               # Deployment config
-└── .gitattributes         # Git LFS tracking
+├── jupyter_notebook/                          # Jupyter notebooks for model training
+│   └── next_word_predictor.ipynb              # Notebook for training the next word prediction model
+├── static/                                    # CSS & JS files
+├── templates/                                 # HTML templates (e.g., index.html)
+├── app.py                                     # Flask backend
+├── next_word_model.h5                         # Trained Keras model
+├── tokenizer.pkl                              # Tokenizer used for input processing
+├── requirements.txt                           # Required Python packages
+├── Procfile                                   # Deployment configuration
+└── .gitattributes                             # Git LFS tracking
+
 ```
 
 ---
