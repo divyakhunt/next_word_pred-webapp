@@ -38,7 +38,7 @@ The training process — including **data preprocessing**, **tokenization**, and
 [🔗 Model Training Code on GitHub](https://github.com/divyakhunt/next-word-predictor/blob/main/next_word_predictor.ipynb)
 
 > 📁 *This is my GitHub repository link that explains how I trained the model used in this web app.*  
-> The notebook walks you through each step of the training process — from preprocessing and tokenization to building the Bidirectional LSTM model.
+> 🧠 The notebook walks you through each step of the training process — from preprocessing and tokenization to building the Bidirectional LSTM model.
 
 ---
 
