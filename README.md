@@ -28,11 +28,23 @@ This is a deep learning-powered web app that predicts the **next word** as you t
 
 ---
 
+## 🧠 Model Training Code
+
+Curious about how the model behind this app was built?
+
+The training process — including **data preprocessing**, **tokenization**, and the **Bidirectional LSTM architecture** — is documented in detail in the Jupyter Notebook below:
+
+📓 **Explore the Model Training Notebook:**  
+[🔗 Model Training Code on GitHub](https://github.com/your-divyakhunt/next-word-predictor/blob/main/next_word_predictor.ipynb)
+
+> 📁 *This is my GitHub repository link which shows how I trained the model used in this web app.*
+> This notebook walks you through each step of training the next word prediction model used in this web app.
+
+---
+
 ## 📁 Project Structure
 
 ```
-├── jupyter_notebook/                          # Jupyter notebooks for model training
-│   └── next_word_predictor.ipynb              # Notebook for training the next word prediction model
 ├── static/                                    # CSS & JS files
 ├── templates/                                 # HTML templates (e.g., index.html)
 ├── app.py                                     # Flask backend
