@@ -3,7 +3,7 @@
 This is a deep learning-powered web app that predicts the **next word** as you type, trained on the classic **Sherlock Holmes stories**. The app provides real-time next-word predictions and allows inserting the predicted word with the `Tab` key.
 
 
-🔗 **Live Web App**: [https://next-word-predictor-rmby.onrender.com/](https://next-word-predictor-rmby.onrender.com/)
+🔗 **Live Web App**: [https://next-word-predictor-rmby.onrender.com/](https://divyakhunt-next-word-predictor.hf.space/)
 
 ⚠️ _Note: The live demo may not always work properly because the model requires high CPU and RAM for each prediction, which can exceed the free-tier hosting limits._
 
