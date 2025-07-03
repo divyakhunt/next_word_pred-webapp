@@ -85,20 +85,24 @@ The training process — including **data preprocessing**, **tokenization**, and
 
 ---
 
-## 🌐 Deployment
+## 🌐 Deployment (Hugging Face Spaces)
 
-### Render / Railway
+This app is deployed on [Hugging Face Spaces](https://huggingface.co/spaces).
 
-- **Build Command**:  
-  `pip install -r requirements.txt`
+### 💡 How it works:
 
-- **Start Command**:  
-  `python app.py`
+- The project uses a `Dockerfile` to define the environment.
+- TensorFlow is installed and used to load the `.h5` model.
+- Git LFS is used to track large files (`.h5`, `.pkl`).
+- The app runs with Flask and is exposed at port `7860`.
 
-- `Procfile` should contain:
-  ```
-  web: python app.py
-  ```
+### ✅ To deploy this yourself on Hugging Face:
+
+1. Clone this repo locally
+2. Create a new [Hugging Face Space](https://huggingface.co/spaces)
+3. Choose **"Docker"** as the Space template
+4. Push your project to the Hugging Face remote using Git LFS
+5. Add `Dockerfile`, `app.py`, `requirements.txt`, and model files
 
 ---
 
